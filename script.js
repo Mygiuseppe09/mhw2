@@ -92,7 +92,7 @@ function lightenTheOthersAnswersWithSameID (answer) {
     }
 }
 
-function restoreallAnswersWithSameID (questionId) {
+function restoreAllAnswersWithSameID (questionId) {
     for (const item of answers) {
         if (item.dataset.questionId === (questionId)) {
             item.classList.remove('unselected');
@@ -119,7 +119,7 @@ function hideResultOfTheQuiz () {
 function selectAnswer(event) {
     const answer = event.currentTarget; // answer = elemento a cui è associato l'eventListner
 
-    restoreallAnswersWithSameID(answer.dataset.questionId);
+    restoreAllAnswersWithSameID(answer.dataset.questionId);
     answer.classList.add('selected');
     checkTheBoxOf(answer);
 
